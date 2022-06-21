@@ -1,7 +1,18 @@
 import './Button.css'
 
 export default function Button(props){
+
+    console.log('props.operation:', props.operation);
+
+    let classes = 'button '
+    classes += props.operation ? 'operation' : ''
+    classes += props.double ? 'double' : ''
+    classes += props.triple ? 'triple' : ''
+
     return(
-        <button className='button'>{props.label}</button>
+        <button className={classes} 
+            onClick={(e) => props.click && props.click(props.label)}>
+            {props.label}
+        </button>
     )
 }
