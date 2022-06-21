@@ -2,8 +2,6 @@ import './Button.css'
 
 export default function Button(props){
 
-    console.log('props.operation:', props.operation);
-
     let classes = 'button '
     classes += props.operation ? 'operation' : ''
     classes += props.double ? 'double' : ''
